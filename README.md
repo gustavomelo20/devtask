@@ -36,7 +36,7 @@
 
 ```bash
 # Clonar o repositório
-git clone https://github.com/gustavomelo20/J.git
+git clone https://github.com/gustavomelo20/devtask.git
 cd devtask
 
 # Baixar dependências
