@@ -43,7 +43,7 @@ cd devtask
 go mod download
 
 # Buildar o binário
-go build -o devtask
+go build -o devtaskJ
 
 # Rodar o programa
 ./devtask --help
