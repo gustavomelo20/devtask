@@ -4,16 +4,16 @@ import (
 	"database/sql"
 	"log"
 
-	_ "github.com/mattn/go-sqlite3"
+	_ "modernc.org/sqlite"
 )
 
 var DB *sql.DB
 
-func InitDB(path string) {
+func InitDB() {
 	var err error
-	DB, err = sql.Open("sqlite3", path)
+	DB, err = sql.Open("sqlite", "devtask.db")
 	if err != nil {
-		log.Fatalf("Erro ao abrir o banco de dados: %v", err)
+		log.Fatalf("Erro ao conectar no banco de dados: %v", err)
 	}
 
 	if err := DB.Ping(); err != nil {
@@ -30,8 +30,7 @@ func runMigrations() {
 		title TEXT NOT NULL,
 		description TEXT,
 		done BOOLEAN NOT NULL DEFAULT 0,
-		created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-		completed_at DATETIME
+		created_at DATETIME DEFAULT CURRENT_TIMESTAMP
 	);`
 
 	if _, err := DB.Exec(query); err != nil {

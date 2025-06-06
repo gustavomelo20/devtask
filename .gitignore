@@ -1,0 +1,17 @@
+# Ignore arquivos SQLite
+*.db
+
+# Ignore executáveis do Windows
+*.exe
+
+# Ignore arquivos de build do Go
+bin/
+build/
+*.exe
+
+# Ignore arquivos temporários do editor
+*.swp
+*.tmp
+
+# Ignore diretórios de dependências (se usar modules, não precisa)
+vendor/

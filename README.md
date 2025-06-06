@@ -20,7 +20,7 @@
 
 - Linguagem: Go  
 - CLI: [Cobra](https://github.com/spf13/cobra)  
-- Banco de dados: SQLite via [mattn/go-sqlite3](https://github.com/mattn/go-sqlite3)  
+- Banco de dados: SQLite via [modernc.org/sqlite]
 - Arquitetura inspirada em Clean Architecture e CQRS  
 
 ---
